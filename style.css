@@ -2,6 +2,11 @@
   font-family: neuehas;
   src: url(fonts/NeueHaasDisplayMediu.ttf);
 }
+@font-face {
+  font-family: neuehas;
+  font-weight: 100;
+  src: url(fonts/NeueHaasDisplayRoman.ttf);
+}
 
 * {
   margin: 0;
@@ -81,7 +86,7 @@ nav {
   display: flex;
   align-items: end;
   justify-content: space-between;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.235);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.235);
   padding-bottom: 2.5vw;
 }
 
@@ -99,8 +104,194 @@ nav {
   text-align: end;
 }
 
-#page1 video{
-    width: 100%;
-    border-radius: 30px;
-    margin-top: 5vw;
+#page1 video {
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 5vw;
+  position: relative;
+}
+
+#hero-shape {
+  position: absolute;
+  width: 46vw;
+  height: 36vw;
+  right: 0;
+  top: 70vh;
+}
+
+#hero-1 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#fe330a, #fe700ae1);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+}
+#hero-2 {
+  width: 30vw;
+  height: 30vw;
+  background: linear-gradient(#fe320a, #fe700ae1);
+  border-radius: 50%;
+  filter: blur(25px);
+  position: absolute;
+  animation-name: anime1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#hero-3 {
+  width: 30vw;
+  height: 30vw;
+  background: linear-gradient(#fe320a, #fe700ae1);
+  border-radius: 50%;
+  filter: blur(25px);
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Page 1 animations */
+
+@keyframes anime1 {
+  from {
+    transform: translate(-5%, 20%);
+  }
+  to {
+    transform: translate(33%, -10%);
+  }
+}
+@keyframes anime2 {
+  from {
+    transform: translate(5%, -5%);
+  }
+  to {
+    transform: translate(-20%, 30%);
+  }
+}
+
+/* Page 2  */
+
+#page2 {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  background-color: #efeae3;
+  padding-top: 5vw;
+}
+#moving-text {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+#moving-text::-webkit-scrollbar {
+  display: none;
+}
+
+#moving-text h1 {
+  font-size: 9vw;
+  display: inline-block;
+}
+
+#con {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: move;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#circle {
+  height: 70px;
+  width: 70px;
+  background-color: #fe320a;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 1vw 2vw;
+}
+
+/* Moving animation */
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#page2-bottom {
+  min-height: 90vh;
+  position: relative;
+  /* background-color: #efeae3; */
+  width: 100%;
+  padding: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+#page2-bottom h1 {
+  font-size: 4vw;
+  width: 60%;
+  line-height: 4vw;
+}
+
+#bottom-part2 {
+  position: absolute;
+  top: 40%;
+  right: 7%;
+  width: 20%;
+}
+#bottom-part2 img {
+  width: 97%;
+  border-radius: 15px;
+}
+
+#page2-bottom p {
+  width: 96%;
+  font-size: 1vw;
+  font-weight: 100;
+  margin-top: 2vw;
+  text-align: justify;
+}
+
+#page2 #red-ball {
+  background: linear-gradient(to top right, #fe2a0a, #fe740a);
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  top: 65%;
+  left: 25%;
+  filter: blur(20px);
+  animation-name: circleskew;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+#page3 {
+  height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+}
+
+/* Red ball moving animation */
+@keyframes circleskew {
+  from {
+    transform: translate(-10%, 10) skew(0);
+    filter: blur(20px);
+  }
+  to {
+    transform: translate(10%, -10%) skew(-15deg);
+    filter: blur(30px);
+  }
 }
