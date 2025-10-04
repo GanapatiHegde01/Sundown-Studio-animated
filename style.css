@@ -18,6 +18,12 @@
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+}
+
+#main{
+  background-color: black;
+  
 }
 
 #page1 {
@@ -54,7 +60,7 @@ nav {
 
 #nav-part2 h4 a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.655);
+  color: rgba(0, 0, 0, 0.801);
   z-index: 9;
   position: relative;
 }
@@ -76,7 +82,7 @@ nav {
   border-radius: 0;
 }
 
-#page1 nav #nav-part2 h4:hover a {
+#nav-part2 h4:hover a {
   color: white;
 }
 
@@ -115,7 +121,7 @@ nav {
   position: absolute;
   width: 46vw;
   height: 36vw;
-  right: -4%;
+  right: 0;
   top: 70vh;
 }
 
@@ -182,6 +188,7 @@ nav {
   width: 100%;
   background-color: #efeae3;
   padding-top: 5vw;
+  margin-top: -1px;
 }
 #moving-text {
   white-space: nowrap;
@@ -279,9 +286,11 @@ nav {
 }
 
 #page3 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #efeae3;
+  padding-top: 4vw;
+  margin-top: -1px;
 }
 
 /* Red ball moving animation */
@@ -295,3 +304,102 @@ nav {
     filter: blur(30px);
   }
 }
+
+#sec {
+  height: 1vw;
+  width: 100%;
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  gap: 0.7vw;
+}
+
+#sec #gol {
+  background-color: #fe2a0a;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+}
+
+#sec p {
+  font-weight: 100;
+  font-size: 1vw;
+}
+
+#elems-container {
+  margin-top: 4vw;
+  padding: 2vw 0;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+}
+
+#elem {
+  height: 8vw;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 1vw 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#elem h2 {
+  font-size: 3vw;
+  padding: 0 2vw;
+}
+
+#overlay {
+  background-color: #ff9831;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  transition: all ease 0.3s;
+  z-index: -1;
+}
+
+#elem:hover #overlay {
+  top: 0;
+}
+
+.fixed-image {
+  height: 28vw;
+  width: 23vw;
+  position: fixed;
+  z-index: 90;
+  border-radius: 20px;
+  left: 50%;
+  top: 20%;
+  display: none;
+  background-size: cover;
+  background-position: center;
+}
+
+#page3 #button {
+  height: 6vw;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  color: white;
+}
+
+#page4 {
+  min-height: 150vh;
+  max-width: 100vw;
+  overflow: hidden;
+  background-color: #efeae3;
+  padding: 6vw 0;
+  margin-top: -1px;
+}
+
+#page5 {
+  min-height: 116vh;
+  max-width: 100vw;
+  overflow: hidden;
+  background-color: transparent;
+  margin-top: -1px;
+}
+
+
