@@ -624,7 +624,7 @@ nav h3 {
   height: 100vh;
   width: 100%;
   background-color: black;
-  z-index: 999;
+  z-index: 10005;
   position: absolute;
   top: 0;
   transition: all ease 0.5s;
@@ -690,6 +690,8 @@ nav h3 {
     padding: 8vw 5vw;
     background-color: #efeae3;
     width: 100%;
+    position: relative;
+    z-index: 10003;
   }
   #nav img {
     height: 10vw;
@@ -707,10 +709,12 @@ nav h3 {
     font-weight: 300;
     border: 1px solid #959595;
     border-radius: 30px;
-    padding-left: 10vw;
+    padding-left: 8vw;
+    position: relative;
+    z-index: 10004;
   }
    nav h3 i{
-    padding-right: vw;
+    padding-right: 2vw;
    }
 
   #full-scr {
@@ -719,7 +723,7 @@ nav h3 {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.185);
   position: fixed;
-  z-index: 99;
+  z-index: 10001;
   top: -100%;
   transition: all ease 0.8s;
 }
@@ -727,7 +731,7 @@ nav h3 {
 #full-scr #full-div1 {
       display: block;
   position: relative;
-  z-index: 999;
+  z-index: 10002;
   height: 45%;
   width: 100%;
   background-color: #efeae3;
@@ -742,6 +746,7 @@ nav h3 {
 }
 
 #full-scr #full-div1 #menu-items{
+  z-index: 100;
   position: absolute;
   top:36%;
   left:30%;
