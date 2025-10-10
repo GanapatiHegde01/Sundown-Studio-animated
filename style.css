@@ -681,7 +681,7 @@ nav h3 {
 /* Mobile responsive */
 @media (max-width: 600px) {
   #page1 {
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
     background-color: #efeae3;
     position: relative;
@@ -752,4 +752,67 @@ nav h3 {
   left:30%;
 
 }
+
+
+#center {
+  height: 42vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.235);
+  padding-bottom: 2.5vw;
+}
+#left {
+  width: 100%;
+}
+#center h3 {
+  width: 80%;
+  font-size: 5vw;
+  font-family: neuehas;
+  line-height: 6vw;
+   padding: 2vw 3vw;
+}
+
+#center h1 {
+  font-size: 15vw;
+  font-family: neuehas;
+  line-height: 18vw;
+  padding: 2vw 3vw;
+  text-align: end;
+}
+
+#page1 video {
+  width: 94%;
+  margin-left: 2vw;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 30px;
+  margin-top: 5vw;
+  position: relative;
+}
+
+#hero-shape {
+  position: absolute;
+  width: 66vw;
+  height: 66vw;
+  right: 0;
+  top: 53vh;
+}
+
+#hero-1 {
+  width: 100%;
+  height: 100%;
+}
+#hero-2 {
+  width: 50vw;
+  height: 45vw;
+}
+#hero-3 {
+  width: 50vw;
+  height: 45vw;
+}
+
 }
