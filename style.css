@@ -460,6 +460,7 @@ nav h3 {
 #black-box #left-part #paragraph {
   color: white;
   font-weight: 100;
+  padding-bottom: 10vw;
 }
 
 #black-box #left-part #menu-items .active {
