@@ -9,9 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 4,
     spaceBetween: 30,
     freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
     },
   });
 });
@@ -54,7 +60,6 @@ if (menuItems.length > 0) {
 
 // Loader animation
 const loader = document.getElementById("loader");
-
 setTimeout(function () {
   loader.style.top = "-100%";
 }, 4000);
@@ -71,7 +76,6 @@ menu.addEventListener("click", function () {
     icon.classList.remove("ri-menu-line");
     icon.classList.add("ri-close-line");
     flag = 1;
-
   } else {
     fullscr.style.top = "-100%";
     navimg.style.opacity = 1;
