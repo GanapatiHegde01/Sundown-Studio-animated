@@ -622,7 +622,7 @@ nav h3 {
 /* Loader */
 
 #loader {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: black;
   z-index: 10005;
@@ -632,6 +632,7 @@ nav h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow:hidden;
 }
 
 #loader h1 {
