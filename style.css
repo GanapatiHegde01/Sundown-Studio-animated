@@ -1088,7 +1088,7 @@ nav h3 {
     top: -20%;
     left: -50%;
     height: 82%;
-    width: 200%;
+    width: 140%;
     background-color: #fe2a0a;
     filter: blur(30px);
     animation-name: shape1;
@@ -1097,4 +1097,7 @@ nav h3 {
     animation-direction: alternate;
     animation-iteration-count: infinite;
   }
+  #footer #shape1 {
+    display: none;
+}
 }
